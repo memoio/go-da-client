@@ -11,9 +11,9 @@ import (
 )
 
 var (
-	getRoute  = "/da/getObject"
-	putRoute  = "/da/putObject"
-	initRoute = "/da/warmup"
+	getRoute  = "/getObject"
+	putRoute  = "/putObject"
+	initRoute = "/warmup"
 )
 
 type MemoDAClient struct {
