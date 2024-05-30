@@ -131,8 +131,8 @@ func putObject(ctx context.Context, rpcaddr string, data []byte) ([]byte, error)
 	if err = json.Unmarshal(body, &res); err != nil {
 		return nil, err
 	}
-	if mid, ok := res["mid"]; !ok {
-		return nil, fmt.Errorf("DA: no mid is returned after putObject")
+	if mid, ok := res["id"]; !ok {
+		return nil, fmt.Errorf("DA: no commitment is returned after putObject")
 	} else {
 		return []byte(mid), nil
 	}
